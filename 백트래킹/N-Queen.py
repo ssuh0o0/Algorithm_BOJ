@@ -7,6 +7,7 @@ col = [0] * n
 
 def Promising(nq):
     for i in range(nq):
+        # 같은 줄에 있거나, 대각선에 있을 경우 (대각선이면 기울기가 1인 것을 이용)
         if col[nq] == col[i] or abs(col[nq] - col[i]) == (nq - i):
             return False
     return True
